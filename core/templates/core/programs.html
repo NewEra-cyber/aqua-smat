@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}PROGRAMS | Aquasmat{% endblock %}
+
+{% block content %}
+<!-- Programs Hero Section -->
+<section class="programs-hero" style="
+    padding: 120px 20px;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(rgba(232, 245, 240, 0.85), rgba(232, 245, 240, 0.85)),
+                url('https://static.wixstatic.com/media/8e740e_de631198687e4a04891acdf4c4782f9a~mv2.jpg/v1/fill/w_1351,h_378,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/8e740e_de631198687e4a04891acdf4c4782f9a~mv2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+">
+    <div class="container" style="position: relative; z-index: 2;">
+        <h1 style="font-size: 48px; font-weight: 700; color: #0F7B56; margin-bottom: 20px; line-height: 1.3;">
+            Our Programs
+        </h1>
+        <p style="font-size: 20px; color: #666666; max-width: 800px; margin: 0 auto 40px; line-height: 1.6;">
+            Welcome to our programs designed to transform the future of aquaculture. We offer initiatives such as the Youth in Sustainable Aquaculture and the Aquaculture Livelihood Improvement Program, which help small and medium-sized fish farmers thrive.
+        </p>
+        <a href="#programs" class="app-button" style="
+            padding: 15px 35px;
+            font-size: 16px;
+            background-color: #0F7B56;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        ">
+            Explore Our Programs
+        </a>
+    </div>
+</section>
+
+<!-- Mission Statement -->
+<section style="padding: 80px 20px; background-color: #ffffff;">
+    <div class="container" style="max-width: 1000px; margin: auto; text-align: center;">
+        <p style="font-size: 18px; color: #666666; max-width: 800px; margin: 0 auto;">
+            Our mission focuses on empowering women and youth to engage in fish production, ensuring a profitable and sustainable future for all. Join us in making a difference in the aquaculture sector!
+        </p>
+    </div>
+</section>
+
+<!-- Programs Grid -->
+<section id="programs" style="padding: 80px 20px; background-color: #F7FAF9;">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; margin-top: 40px;">
+            <!-- YISA Program -->
+            <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+                <div style="height: 250px; overflow: hidden;">
+                    <img src="https://static.wixstatic.com/media/8e740e_9c3edb76f19a4a159e530eedba5d835b~mv2.jpg/v1/fill/w_567,h_338,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/0M7A7660_edited.jpg" alt="Youth In Sustainable Aquaculture" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="padding: 30px;">
+                    <h3 style="font-size: 24px; color: #0F7B56; margin-bottom: 15px;">Youth In Sustainable Aquaculture</h3>
+                    <p style="color: #666; margin-bottom: 20px;">
+                        YISA supports young people, especially young women, in creating dignified and fulfilling work opportunities in the aquaculture and mariculture sectors.
+                    </p>
+                    <a href="{% url 'yisa' %}" class="app-button" style="padding: 10px 20px; font-size: 14px; display: inline-block;">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+
+            <!-- ALIP Program -->
+            <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+                <div style="height: 250px; overflow: hidden;">
+                    <img src="https://static.wixstatic.com/media/8e740e_4c70c92dd40c427db804ef94a2f591ec~mv2.jpg/v1/crop/x_403,y_0,w_1243,h_1365/fill/w_567,h_338,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/486387877_1568927850714963_7950788077502592506_n.jpg" alt="Aquaculture Livelihood Improvement Program" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="padding: 30px;">
+                    <h3 style="font-size: 24px; color: #0F7B56; margin-bottom: 15px;">Aquaculture Livelihood Improvement Program</h3>
+                    <p style="color: #666; margin-bottom: 20px;">
+                        ALIP empowers women in the fish production industry by supporting small and medium-sized fish farms. Through innovative training and resources, we help them transition into profitable ventures, creating opportunities and fostering growth in the community.
+                    </p>
+                    <a href="#" class="app-button" style="padding: 10px 20px; font-size: 14px; display: inline-block;">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Impact Section -->
+<section style="padding: 80px 20px; background-color: #ffffff;">
+    <div class="container" style="max-width: 1000px; margin: auto; text-align: center;">
+        <h2 style="font-size: 36px; color: #0F7B56; margin-bottom: 40px;">Our Impact</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center;">
+            <div>
+                <div style="font-size: 48px; font-weight: 700; color: #0F7B56; margin-bottom: 10px;">500+</div>
+                <div style="font-size: 18px; color: #666;">Farmers Trained</div>
+            </div>
+            <div>
+                <div style="font-size: 48px; font-weight: 700; color: #0F7B56; margin-bottom: 10px;">60%</div>
+                <div style="font-size: 18px; color: #666;">Women Participation</div>
+            </div>
+            <div>
+                <div style="font-size: 48px; font-weight: 700; color: #0F7B56; margin-bottom: 10px;">30+</div>
+                <div style="font-size: 18px; color: #666;">Communities Reached</div>
+            </div>
+            <div>
+                <div style="font-size: 48px; font-weight: 700; color: #0F7B56; margin-bottom: 10px;">75%</div>
+                <div style="font-size: 18px; color: #666;">Income Increase</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section style="padding: 80px 20px; background-color: #0F7B56; text-align: center;">
+    <div class="container" style="max-width: 800px; margin: auto;">
+        <h2 style="font-size: 32px; color: white; margin-bottom: 20px;">Ready to join our programs?</h2>
+        <p style="font-size: 18px; color: rgba(255,255,255,0.9); margin-bottom: 30px;">
+            Whether you're a young person looking to start in aquaculture or an established farmer seeking to improve your operations, we have a program for you.
+        </p>
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+            <a href="{% url 'contact' %}" class="app-button" style="background-color: white; color: #0F7B56; padding: 12px 30px; font-size: 16px;">
+                Contact Us
+            </a>
+            <a href="#" class="app-button" style="background-color: transparent; border: 2px solid white; color: white; padding: 12px 30px; font-size: 16px;">
+                Download Brochure
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

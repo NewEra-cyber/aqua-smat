@@ -1,0 +1,238 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}YISA | Aquasmat{% endblock %}
+
+{% block content %}
+<!-- Enhanced Hero Section with Background Image -->
+<section class="yisa-hero" style="
+    background: linear-gradient(rgba(15, 123, 86, 0.85), rgba(15, 123, 86, 0.85)), 
+                url('{% static 'core/images/0M7A7498_edited_edited.jpg' %}');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 150px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+">
+    <div class="container" style="position: relative; z-index: 2; max-width: 900px;">
+        <h1 style="font-size: 52px; font-weight: 700; margin-bottom: 25px; line-height: 1.3;">Youth in Sustainable Aquaculture</h1>
+        <p style="font-size: 22px; max-width: 700px; margin: 0 auto 40px; line-height: 1.6;">
+            Empowering young people, especially women, through innovative aquaculture opportunities
+        </p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="#apply" class="app-button" style="
+                background-color: white; 
+                color: #0F7B56; 
+                padding: 15px 40px; 
+                font-size: 18px;
+                border-radius: 8px;
+                font-weight: 600;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            ">
+                Apply Now
+            </a>
+            <a href="#stories" class="app-button" style="
+                background-color: transparent; 
+                color: white; 
+                padding: 15px 40px; 
+                font-size: 18px;
+                border-radius: 8px;
+                border: 2px solid white;
+                font-weight: 600;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            ">
+                View Success Stories
+            </a>
+        </div>
+    </div>
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: linear-gradient(to bottom, transparent, white);"></div>
+</section>
+
+<!-- Program Overview with Animated Stats -->
+<section style="padding: 100px 20px; background-color: white;">
+    <div class="container" style="max-width: 1200px; margin: auto;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; align-items: center;">
+            <div>
+                <h2 style="font-size: 36px; color: #0F7B56; margin-bottom: 25px; line-height: 1.3;">About YISA Program</h2>
+                <p style="font-size: 18px; color: #666; margin-bottom: 25px; line-height: 1.7;">
+                    The Youth in Sustainable Aquaculture (YISA) Program, a partnership with the Mastercard Foundation, aims to enhance resilient livelihoods through innovative aquaculture practices.
+                </p>
+                <p style="font-size: 18px; color: #666; margin-bottom: 30px; line-height: 1.7;">
+                    Our project transforms perceptions of aquaculture's potential for entrepreneurship and employment, building knowledge and capacity so young people, especially women, can access the sector's growth opportunities.
+                </p>
+                
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                    <div style="text-align: center;">
+                        <div class="counter" data-target="150000" style="font-size: 36px; font-weight: 700; color: #0F7B56; margin-bottom: 5px;">0</div>
+                        <p style="color: #666;">Jobs to Create</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div class="counter" data-target="6" style="font-size: 36px; font-weight: 700; color: #0F7B56; margin-bottom: 5px;">0</div>
+                        <p style="color: #666;">Counties</p>
+                    </div>
+                </div>
+            </div>
+            <div style="position: relative;">
+                <img src="https://static.wixstatic.com/media/8e740e_c858ad081174404ca449f64bcb5771fd~mv2.jpg/v1/crop/x_155,y_0,w_2690,h_2000/fill/w_581,h_471,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/0M7A7498_edited_edited.jpg" alt="YISA Participants" style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Program Details with Icons -->
+<section style="padding: 100px 20px; background-color: #F7FAF9;">
+    <div class="container" style="max-width: 1200px; margin: auto;">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="font-size: 36px; color: #0F7B56; margin-bottom: 20px; position: relative; display: inline-block;">
+                Program Details
+                <span style="position: absolute; bottom: -10px; left: 0; right: 0; height: 3px; background-color: #0F7B56; width: 80px; margin: 0 auto;"></span>
+            </h2>
+            <p style="font-size: 18px; color: #666; max-width: 700px; margin: 20px auto 0;">
+                YISA is designed to create sustainable opportunities for young people in aquaculture
+            </p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <div style="background: white; border-radius: 12px; padding: 40px 30px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; border-top: 4px solid #0F7B56;">
+                <div style="width: 80px; height: 80px; background-color: #E8F5F0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                    <i class="fas fa-map-marker-alt" style="color: #0F7B56; font-size: 30px;"></i>
+                </div>
+                <h3 style="font-size: 22px; color: #222; margin-bottom: 15px;">Location Coverage</h3>
+                <p style="color: #666; line-height: 1.6;">
+                    Operating in Kisumu, Homa Bay, Siaya, Kakamega, Busia, and Kilifi counties
+                </p>
+            </div>
+            
+            <div style="background: white; border-radius: 12px; padding: 40px 30px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; border-top: 4px solid #0F7B56;">
+                <div style="width: 80px; height: 80px; background-color: #E8F5F0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                    <i class="fas fa-users" style="color: #0F7B56; font-size: 30px;"></i>
+                </div>
+                <h3 style="font-size: 22px; color: #222; margin-bottom: 15px;">Eligibility</h3>
+                <p style="color: #666; line-height: 1.6;">
+                    Open to youth aged 23-32 years from the six target counties
+                </p>
+            </div>
+            
+            <div style="background: white; border-radius: 12px; padding: 40px 30px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; border-top: 4px solid #0F7B56;">
+                <div style="width: 80px; height: 80px; background-color: #E8F5F0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                    <i class="fas fa-bullseye" style="color: #0F7B56; font-size: 30px;"></i>
+                </div>
+                <h3 style="font-size: 22px; color: #222; margin-bottom: 15px;">Our Goal</h3>
+                <p style="color: #666; line-height: 1.6;">
+                    Create 150,000 sustainable jobs in aquaculture for young people
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Enhanced CTA Section -->
+<section id="apply" style="padding: 100px 20px; background: linear-gradient(135deg, #0F7B56 0%, #0a5a40 100%); color: white; text-align: center;">
+    <div class="container" style="max-width: 800px; margin: auto;">
+        <h2 style="font-size: 36px; margin-bottom: 20px; font-weight: 700;">Ready To Transform Your Future With Aquaculture?</h2>
+        <p style="font-size: 18px; margin-bottom: 40px; opacity: 0.9; line-height: 1.6;">
+            Join the YISA program today and gain access to training, resources, and support to launch your aquaculture business.
+        </p>
+        
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 50px;">
+            <a href="#" class="app-button" style="
+                background-color: white; 
+                color: #0F7B56; 
+                padding: 15px 40px; 
+                font-size: 16px; 
+                border-radius: 8px;
+                font-weight: 600;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                transition: all 0.3s ease;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            ">
+                <i class="fas fa-user-edit" style="margin-right: 10px;"></i> Apply Now
+            </a>
+            <a href="#" class="app-button" style="
+                background-color: transparent; 
+                color: white; 
+                padding: 15px 40px; 
+                font-size: 16px;
+                border-radius: 8px;
+                border: 2px solid white;
+                font-weight: 600;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                transition: all 0.3s ease;
+            ">
+                <i class="fas fa-question-circle" style="margin-right: 10px;"></i> Learn More
+            </a>
+        </div>
+        
+        <div style="margin-top: 50px; padding-top: 50px; border-top: 1px solid rgba(255,255,255,0.2);">
+            <h3 style="font-size: 24px; margin-bottom: 25px;">Need Help? Contact Us</h3>
+            <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;">
+                <div>
+                    <i class="fas fa-phone-alt" style="font-size: 20px; margin-bottom: 10px; display: block;"></i>
+                    <a href="tel:+254XXXXXXXXX" style="font-size: 18px; color: white; text-decoration: none; font-weight: 600;">+254 XXX XXX XXX</a>
+                </div>
+                <div>
+                    <i class="fas fa-envelope" style="font-size: 20px; margin-bottom: 10px; display: block;"></i>
+                    <a href="mailto:yisa@aquarech.com" style="font-size: 18px; color: white; text-decoration: none; font-weight: 600;">yisa@aquarech.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript for Interactive Elements -->
+<script>
+    // Counter animation
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+    
+    counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
+        
+        if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCounter, 1);
+        } else {
+            counter.innerText = target;
+        }
+        
+        function updateCounter() {
+            const count = +counter.innerText;
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCounter, 1);
+            } else {
+                counter.innerText = target;
+            }
+        }
+    });
+    
+    // Story carousel navigation
+    const slider = document.querySelector('.stories-slider');
+    const prevBtn = document.querySelector('.story-nav.prev');
+    const nextBtn = document.querySelector('.story-nav.next');
+    
+    nextBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: 330, behavior: 'smooth' });
+    });
+    
+    prevBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: -330, behavior: 'smooth' });
+    });
+</script>
+{% endblock %}
