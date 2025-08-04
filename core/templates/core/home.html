@@ -1,0 +1,248 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section" style="
+    padding: 120px 20px; 
+    text-align: center; 
+    position: relative; 
+    overflow: hidden;
+    background: linear-gradient(rgba(232, 243, 245, 0.8), rgba(232, 245, 240, 0.8)), 
+                url('https://static.wixstatic.com/media/08be63_6e56bccbc7804ebc8a714f3e96f5338e~mv2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+">
+    <div class="container" style="position: relative; z-index: 2;">
+        <h1 style="font-size: 48px; font-weight: 700; color: #0F7B56; margin-bottom: 20px; line-height: 1.2;">
+            Empowering Small & Medium Fish Farmers
+        </h1>
+        <p style="font-size: 20px; color: #666666; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+            Africa's leading aquaculture platform driving profitability through innovation
+        </p>
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+            <a href="https://play.google.com/store/apps/details?id=com.example.aquarech" class="app-button" style="padding: 15px 35px; font-size: 16px; background-color: #0F7B56; color: white; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
+                Get Started
+            </a>
+            <a href="{% url 'about' %}" class="app-button" style="padding: 15px 35px; font-size: 16px; background-color: transparent; border: 2px solid #0F7B56; color: #0F7B56; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
+                Learn More
+            </a>
+        </div>
+    </div>
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: linear-gradient(to bottom, transparent, white); z-index: 1;"></div>
+</section>
+<!-- Empowering Section -->
+<section style="padding: 100px 20px; background-color: #ffffff;">
+    <div class="container" style="max-width: 1200px; margin: auto;">
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 60px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="color: #0F7B56; font-size: 36px; margin-bottom: 25px; line-height: 1.3;">Transforming Aquaculture in Africa</h2>
+                <p style="font-size: 18px; color: #666666; margin-bottom: 30px; line-height: 1.6;">
+                    Aquasmat is revolutionizing fish farming through innovative methods that improve livelihoods while promoting sustainable, environment-friendly practices. Our integrated platform creates value chain efficiencies for all stakeholders in the aquaculture ecosystem.
+                </p>
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <img src="https://static.wixstatic.com/media/dea289_125e91d2bc6d435faeb4bfb1b5065541~mv2.jpg/v1/crop/x_404,y_142,w_3350,h_3506/fill/w_589,h_616,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/20220610-IMG_7946.jpg" alt="aquarech Farmers" style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Who It's For -->
+<section style="padding: 100px 20px; background-color: #F7FAF9;">
+    <div class="container" style="max-width: 1200px; margin: auto;">
+        <h2 style="text-align: center; color: #0F7B56; font-size: 36px; margin-bottom: 15px;">One reliable platform for all your aquaculture needs</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <!-- Farmer Card -->
+            <div style="background: white; border-radius: 12px; padding: 40px 30px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; border-top: 4px solid #0F7B56;">
+                <div style="width: 80px; height: 80px; background-color: #E8F5F0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                    <img src="{% static 'farmer_icon.png' %}" alt="Fish Farmers" style="width: 40px;">
+                </div>
+                <h3 style="font-size: 22px; margin-bottom: 15px; color: #222;">For Fish Farmers</h3>
+                <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+                    Access premium feed, guaranteed markets, and expert training to maximize your farm's productivity and profitability.
+                </p>
+                <a href="#" style="color: #0F7B56; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center;">
+                    Learn more <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+                </a>
+            </div>
+            
+            <!-- Trader Card -->
+            <div style="background: white; border-radius: 12px; padding: 40px 30px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; border-top: 4px solid #0F7B56;">
+                <div style="width: 80px; height: 80px; background-color: #E8F5F0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                    <img src="{% static 'trader_icon.png' %}" alt="Fish Traders" style="width: 40px;">
+                </div>
+                <h3 style="font-size: 22px; margin-bottom: 15px; color: #222;">For Fish Traders</h3>
+                <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+                    Connect with our network of quality-conscious fish farmers and expand your distribution channels.
+                </p>
+                <a href="#" class="app-button" style="display: inline-block; margin-top: 10px; padding: 12px 25px; font-size: 14px; background-color: #0F7B56; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">
+                    Join Our Network
+                </a>
+            </div>
+            
+            <!-- Fish Lover Card -->
+            <div style="background: white; border-radius: 12px; padding: 40px 30px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; border-top: 4px solid #0F7B56;">
+                <div style="width: 80px; height: 80px; background-color: #E8F5F0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                    <img src="{% static 'fishlover_icon.png' %}" alt="Fish Lovers" style="width: 40px;">
+                </div>
+                <h3 style="font-size: 22px; margin-bottom: 15px; color: #222;">For Consumers</h3>
+                <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+                    Enjoy fresh, sustainable tilapia that supports local communities and promotes food security.
+                </p>
+                <a href="#" style="color: #0F7B56; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center;">
+                    Find Products <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Aquasmat Advantage -->
+<section style="padding: 10px 10px; background-color: #075bbc;">
+    <div class="container" style="max-width: 1200px; margin: auto;">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="color: #0F7B56; font-size: 36px; margin-bottom: 20px;">The Aquasmat Difference</h2>
+            <p style="font-size: 18px; color: #000000; max-width: 700px; margin: 0 auto;">
+                Our integrated approach solves the key challenges facing small and medium-scale fish farmers
+            </p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 50px;">
+            <div>
+                <div style="display: flex; align-items: flex-start; margin-bottom: 40px;">
+                    <div style="background-color: #E8F5F0; width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 25px; flex-shrink: 0;">
+                        <i class="fas fa-water" style="color: #0F7B56; font-size: 24px;"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 22px; margin-bottom: 12px; color: #222;">Premium Floating Feed</h4>
+                        <p style="color: #ffffff; line-height: 1.6;">
+                            Our nutritionally optimized floating pellets enhance growth rates while protecting water quality and aquatic ecosystems.
+                        </p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; align-items: flex-start; margin-bottom: 40px;">
+                    <div style="background-color: #ffffff; width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 25px; flex-shrink: 0;">
+                        <i class="fas fa-chart-line" style="color: #0F7B56; font-size: 24px;"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 22px; margin-bottom: 12px; color: #222;">Data-Driven Farming</h4>
+                        <p style="color: #ffffff; line-height: 1.6;">
+                            Our digital tools provide real-time monitoring and analytics to optimize feeding, growth, and harvest timing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <div style="display: flex; align-items: flex-start; margin-bottom: 40px;">
+                    <div style="background-color: #E8F5F0; width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 25px; flex-shrink: 0;">
+                        <i class="fas fa-handshake" style="color: #0F7B56; font-size: 24px;"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 22px; margin-bottom: 12px; color: #222;">Guaranteed Market</h4>
+                        <p style="color: #ffffff; line-height: 1.6;">
+                            We provide reliable offtake agreements so farmers can focus on production without worrying about sales.
+                        </p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; align-items: flex-start; margin-bottom: 40px;">
+                    <div style="background-color: #E8F5F0; width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 25px; flex-shrink: 0;">
+                        <i class="fas fa-graduation-cap" style="color: #0F7B56; font-size: 24px;"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 22px; margin-bottom: 12px; color: #222;">Farmer Training</h4>
+                        <p style="color: #ffffff; line-height: 1.6;">
+                            Continuous education programs ensure farmers adopt best practices for sustainable, profitable operations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial -->
+<section class="success-stories" style="padding: 80px 20px; background-color: #F7FAF9;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; color: #0F7B56; font-size: 36px; margin-bottom: 50px;">We are cherished by Fish Farmers</h2>
+        
+        <div class="stories-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+            {% for story in stories %}
+            <div class="story-card" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                <img src="{{ story.image.url }}" alt="{{ story.name }}" style="width: 100%; height: 250px; object-fit: cover;">
+                <div style="padding: 25px;">
+                    <h3 style="font-size: 22px; margin-bottom: 10px; color: #222;">{{ story.name }}</h3>
+                    <p style="color: #0F7B56; margin-bottom: 15px;"><em>{{ story.locality }}</em></p>
+                    <p style="color: #666; line-height: 1.6; margin-bottom: 20px;">{{ story.story }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <!-- Navigation between stories -->
+        {% if stories.has_other_pages %}
+        <div class="pagination" style="display: flex; justify-content: center; gap: 15px; margin-top: 40px;">
+            {% if stories.has_previous %}
+                <a href="?page={{ stories.previous_page_number }}" style="padding: 10px 20px; background-color: #0F7B56; color: white; border-radius: 6px; text-decoration: none;">
+                    Previous
+                </a>
+            {% endif %}
+            
+            {% for num in stories.paginator.page_range %}
+                {% if stories.number == num %}
+                    <span style="padding: 10px 20px; background-color: #E8F5F0; color: #0F7B56; border-radius: 6px; font-weight: bold;">
+                        {{ num }}
+                    </span>
+                {% elif num > stories.number|add:'-3' and num < stories.number|add:'3' %}
+                    <a href="?page={{ num }}" style="padding: 10px 20px; background-color: white; color: #0F7B56; border-radius: 6px; text-decoration: none;">
+                        {{ num }}
+                    </a>
+                {% endif %}
+            {% endfor %}
+            
+            {% if stories.has_next %}
+                <a href="?page={{ stories.next_page_number }}" style="padding: 10px 20px; background-color: #0F7B56; color: white; border-radius: 6px; text-decoration: none;">
+                    Next
+                </a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section style="padding: 70px 14px; background-color: #E8F5F0; text-align: center;">
+    <div class="container" style="max-width: 800px; margin: auto;">
+        <h2 style="color: #0F7B56; font-size: 36px; margin-bottom: 20px;">Ready to Transform Your Fish Farming Business?</h2>
+        <p style="font-size: 18px; color: #666666; margin-bottom: 40px;">
+            Join hundreds of farmers already benefiting from the Aquasmat platform
+        </p>
+        <a href="#" class="app-button" style="padding: 15px 40px; font-size: 16px; background-color: #0F7B56; color: white; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">
+            Get Started Today
+        </a>
+    </div>
+</section>
+
+<!-- Newsletter -->
+<section style="padding: 60px 12px; background-color: #ffffff; border-top: 1px solid #eee;">
+    <div class="container" style="max-width: 600px; margin: auto; text-align: center;">
+        <h3 style="color: #0F7B56; font-size: 28px; margin-bottom: 20px;">Stay Updated</h3>
+        <p style="color: #666; margin-bottom: 30px; font-size: 16px; line-height: 1.6;">
+            Subscribe to our newsletter for the latest in sustainable aquaculture, farmer success stories, and industry insights.
+        </p>
+        
+        <form action="#" method="post" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 500px; margin: 0 auto;">
+            {% csrf_token %}
+            <input type="email" name="email" placeholder="Enter your email" required 
+                   style="padding: 15px 20px; border: 1px solid #ddd; border-radius: 8px; flex: 1; min-width: 250px; font-size: 16px;">
+            <button type="submit" class="app-button" style="padding: 15px 30px; font-size: 16px; background-color: #0F7B56; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">
+                Subscribe
+            </button>
+        </form>
+    </div>
+</section>
+{% endblock %}
