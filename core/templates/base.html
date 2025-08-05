@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="aquarech - Transforming aquaculture in Africa through innovative fish farming solutions">
-    <title>{% block title %}aquarech{% endblock %}</title>
+    <meta name="description" content="Aquarech - Transforming aquaculture in Africa through innovative fish farming solutions">
+    <title>{% block title %}Aquasmat{% endblock %}</title>
     <link rel="icon" href="{% static 'logo.png' %}" type="image/png" sizes="80x80">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -75,7 +75,7 @@
             top: 0;
             z-index: 1000;
             transition: var(--transition-slow);
-            background-color: var(--dark-blue);
+            background-color: var(--aqua-blue);
             backdrop-filter: blur(10px);
             height: 90px;
         }
@@ -570,7 +570,7 @@
     <nav>
         <div class="logo">
           <a href="{% url 'home' %}">
-              <img src="{% static 'logo.png' %}" alt="aquarech Logo">
+              <img src="{% static 'logo.png' %}" alt="Aquarech Logo">
           </a>
         </div>
 
@@ -603,7 +603,7 @@
                 <li><a href="{% url 'contact' %}">Contact</a></li>
             </ul>
 
-            <a href="https://play.google.com/store/apps/details?id=com.example.aquarech" class="app-button pulse" target="_blank">
+            <a href="https://play.google.com/store/apps/details?id=com.example.aquasmat" class="app-button pulse" target="_blank">
                 <i class="fas fa-download"></i> Fish Mart
             </a>
         </div>
@@ -616,7 +616,7 @@
         <section class="hero" style="background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('{% static "images/hero-bg.jpg" %}'); background-size: cover; background-position: center; padding: 120px 0; text-align: center;">
             <div class="container">
                 <h1 style="font-size: 3.5rem; font-weight: 700; color: var(--primary-blue); margin-bottom: 25px; line-height: 1.2; animation: fadeInUp 1s ease-out;">Transforming Aquaculture in Africa</h1>
-                <p style="font-size: 1.25rem; color: var(--medium-text); max-width: 700px; margin: 0 auto 40px; animation: fadeInUp 1s ease-out 0.2s forwards; opacity: 0;">aquarech is building the digital and physical infrastructure to power Africa's aquaculture value chain, starting with small-scale fish farmers.</p>
+                <p style="font-size: 1.25rem; color: var(--medium-text); max-width: 700px; margin: 0 auto 40px; animation: fadeInUp 1s ease-out 0.2s forwards; opacity: 0;">Aquasmat is building the digital and physical infrastructure to power Africa's aquaculture value chain, starting with small-scale fish farmers.</p>
                 <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; animation: fadeInUp 1s ease-out 0.4s forwards; opacity: 0;">
                     <a href="{% url 'contact' %}" class="app-button">Contact Us</a>
                     <a href="{% url 'about' %}" class="app-button" style="background: transparent; border: 2px solid var(--primary-blue); color: var(--primary-blue);">Learn More</a>
