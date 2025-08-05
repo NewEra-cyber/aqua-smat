@@ -26,7 +26,11 @@ SECRET_KEY = 'django-insecure-4b+y_6xnn$jk+0ul$_uvy5v7&vijb1y#visy2cd4jrrp7w4w)w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'aqua-smat-1.onrender.com',
+    'localhost',
+    '127.0.0.1',
+]
 
 
 # Application definition
