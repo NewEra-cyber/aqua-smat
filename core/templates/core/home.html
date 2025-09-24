@@ -1,0 +1,295 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section" style="
+    padding: 110px 20px; 
+    text-align: center; 
+    position: relative; 
+    overflow: hidden;
+    background: linear-gradient(rgba(17, 1, 243, 0.85), rgba(0, 0, 0, 0.85)),
+                url('https://static.wixstatic.com/media/08be63_6e56bccbc7804ebc8a714f3e96f5338e~mv2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+">
+    <div class="container" style="position: relative; z-index: 2;">
+        <h1 style="font-size: 48px; font-weight: 700; color: #ffffff; margin-bottom: 20px; line-height: 1.2;">
+            Empowering Small & Medium Fish Farmers
+        </h1>
+        <p style="font-family: Times New Roman; font-size: 23px; color: #fcfcfc; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <b>Africa's leading aquaculture platform driving profitability through innovation</b>
+        </p>
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+            <a href="https://play.google.com/store/apps/details?id=com.example.aquasmat" class="app-button" style="padding: 15px 35px; font-size: 16px; background-color: #01afff; color: white; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
+                Get Started
+            </a>
+            <a href="{% url 'about' %}" class="app-button" style="padding: 15px 35px; font-size: 16px; background-color: transparent; border: 2px solid #01afff; color: #01afff; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease;">
+                Learn More
+            </a>
+        </div>
+    </div>
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: linear-gradient(to bottom, transparent, white); z-index: 1;"></div>
+</section>
+<!-- Empowering Section -->
+<section style="padding: 100px 20px; background-color: #ffffff;">
+    <div class="container" style="max-width: 1200px; margin: auto;">
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 60px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="color: #0008ff; font-size: 36px; margin-bottom: 25px; line-height: 1.3;">Transforming Aquaculture in Africa</h2>
+                <p style="font-size: 18px; color: #666666; margin-bottom: 30px; line-height: 1.6;">
+                    Aquasmat is revolutionizing fish farming through innovative methods that improve livelihoods while promoting sustainable, environment-friendly practices. Our integrated platform creates value chain efficiencies for all stakeholders in the aquaculture ecosystem.
+                </p>
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <img src="https://static.wixstatic.com/media/08be63_254fc356d85b4b07992d65152af3cd02~mv2.jpg" alt="Aquarech Farmers" style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Who It's For -->
+<section style="padding: 100px 20px; background-color: #F7FAF9;">
+<div style="
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 50px / 100px;
+    background: 
+        url('https://static.wixstatic.com/media/08be63_711131e045aa433caee41d96bb153614~mv2.png') repeat,
+        linear-gradient(rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0.9));
+    background-blend-mode: overlay;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 2px solid #01afff;
+">
+    <h3 style="font-size: 24px; font-weight: 700; color: #0008ff; margin: 0;">
+        One reliable platform for all your aquaculture needs.
+    </h3>
+</div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <!-- Farmer Card -->
+            <div style="background: white; border-radius: 12px; padding: 40px 30px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; border-top: 4px solid #01afff;">
+                <div style="width: 80px; height: 80px; background-color: #E8F5F0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                    <img src="https://static.wixstatic.com/media/08be63_911e6259dbe5476a96de519c545cd7c7~mv2.png" alt="Fish Farmers" style="width: 40px;">
+                </div>
+                <h3 style="font-size: 22px; margin-bottom: 15px; color: #01afff;">For Fish Farmers</h3>
+                <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+                    Access premium feed, guaranteed markets, and expert training to maximize your farm's productivity and profitability.
+                </p>
+                <a href="#" style="color: #01afff; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center;">
+                    Learn more <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+                </a>
+            </div>
+            
+            <!-- Trader Card -->
+            <div style="background: white; border-radius: 12px; padding: 40px 30px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; border-top: 4px solid #01afff;">
+                <div style="width: 80px; height: 80px; background-color: #E8F5F0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                    <img src="https://static.wixstatic.com/media/08be63_b4612b8639684b4e9f7b8888bdc22052~mv2.png" alt="Fish Traders" style="width: 40px;">
+                </div>
+                <h3 style="font-size: 22px; margin-bottom: 15px; color: #01afff;">For Fish Traders</h3>
+                <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+                    Connect with our network of quality-conscious fish farmers and expand your distribution channels.
+                </p>
+                <a href="#" class="app-button" style="display: inline-block; margin-top: 10px; padding: 12px 25px; font-size: 14px; background-color: #01afff; color: white; border-radius: 6px; text-decoration: none; font-weight: 600;">
+                    Join Our Network
+                </a>
+            </div>
+            
+            <!-- Fish Lover Card -->
+            <div style="background: white; border-radius: 12px; padding: 40px 30px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; border-top: 4px solid #01afff;">
+                <div style="width: 80px; height: 80px; background-color: #E8F5F0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                    <img src="https://static.wixstatic.com/media/08be63_d7d7429987a143c28fe31b19d97beca0~mv2.png" alt="Fish Lovers" style="width: 40px;">
+                </div>
+                <h3 style="font-size: 22px; margin-bottom: 15px; color: #01afff;">For Consumers</h3>
+                <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">
+                    Enjoy fresh, sustainable tilapia that supports local communities and promotes food security.
+                </p>
+                <a href="#" style="color: #01afff; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center;">
+                    Find Products <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Aquarech Advantage -->
+<section style="padding: 10px 10px; background-color: #ffffff;">
+    <div class="container" style="max-width: 1200px; margin: auto;">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="color: #1100ff; font-size: 36px; margin-bottom: 20px;">The Aquasmat Difference</h2>
+            <p style="font-size: 18px; color: #01afff; max-width: 700px; margin: 0 auto;">
+                Our integrated approach solves the key challenges facing small and medium-scale fish farmers
+            </p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 50px;">
+            <div>
+                <div style="display: flex; align-items: flex-start; margin-bottom: 40px;">
+                    <div style="background-color: #E8F5F0; width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 25px; flex-shrink: 0;">
+                        <i class="fas fa-water" style="color: #01afff; font-size: 24px;"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 22px; margin-bottom: 12px; color: #01afff;">Premium Floating Feed</h4>
+                        <p style="color: #666; line-height: 1.6;">
+                            Our nutritionally optimized floating pellets enhance growth rates while protecting water quality and aquatic ecosystems.
+                        </p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; align-items: flex-start; margin-bottom: 40px;">
+                    <div style="background-color: #E8F5F0; width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 25px; flex-shrink: 0;">
+                        <i class="fas fa-chart-line" style="color: #01afff; font-size: 24px;"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 22px; margin-bottom: 12px; color: #01afff;">Data-Driven Farming</h4>
+                        <p style="color: #666; line-height: 1.6;">
+                            Our digital tools provide real-time monitoring and analytics to optimize feeding, growth, and harvest timing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <div style="display: flex; align-items: flex-start; margin-bottom: 40px;">
+                    <div style="background-color: #E8F5F0; width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 25px; flex-shrink: 0;">
+                        <i class="fas fa-handshake" style="color: #01afff; font-size: 24px;"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 22px; margin-bottom: 12px; color: #01afff;">Guaranteed Market</h4>
+                        <p style="color: #666; line-height: 1.6;">
+                            We provide reliable offtake agreements so farmers can focus on production without worrying about sales.
+                        </p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; align-items: flex-start; margin-bottom: 40px;">
+                    <div style="background-color: #E8F5F0; width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 25px; flex-shrink: 0;">
+                        <i class="fas fa-graduation-cap" style="color: #01afff; font-size: 24px;"></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 22px; margin-bottom: 12px; color: #01afff;">Farmer Training</h4>
+                        <p style="color: #666; line-height: 1.6;">
+                            Continuous education programs ensure farmers adopt best practices for sustainable, profitable operations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial -->
+<section class="success-stories" style="padding: 80px 20px; background-color: #F7FAF9;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+        <h2 style="text-align: center; color: #001eb4; font-size: 36px; margin-bottom: 50px;">We are cherished by Fish Farmers</h2>
+        
+<div class="stories-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px;">
+
+  <!-- Testimonial 1 -->
+  <div class="story-card" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+    <img src="https://static.wixstatic.com/media/08be63_6792626c3f5f4cc59d446593f104c669~mv2.png" alt="Martin Otieno" style="width: 100%; height: 250px; object-fit: cover;">
+    <div style="padding: 25px;">
+      <h3 style="font-size: 22px; margin-bottom: 10px; color: #222;">Martin Otieno</h3>
+      <p style="color: #01afff; margin-bottom: 15px;"><em>Fish Farmer, Kisumu</em></p>
+      <p style="color: #666; line-height: 1.6; margin-bottom: 20px;">
+        Honestly, before Aquasmat, I was just guessing. My yields were unpredictable, and I often worried about where I'd sell my fish. But the training they gave me was a game-changer. I learned so much about proper pond management and feeding. Plus, knowing I have a guaranteed market for my harvest means I can focus on growing quality fish without the stress. My family's finances are so much more stable now.
+      </p>
+    </div>
+  </div>
+
+  <!-- Testimonial 2 -->
+  <div class="story-card" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+    <img src="https://static.wixstatic.com/media/08be63_9eab032d3da0411a97c8482cdd80b4ec~mv2.png" alt="Daudi Osoo" style="width: 100%; height: 250px; object-fit: cover;">
+    <div style="padding: 25px;">
+      <h3 style="font-size: 22px; margin-bottom: 10px; color: #222;">Daudi Osoo</h3>
+      <p style="color: #01afff; margin-bottom: 15px;"><em>Fish Farmer, Siaya</em></p>
+      <p style="color: #666; line-height: 1.6; margin-bottom: 20px;">
+        I was skeptical at first, but Aquasmat really delivered. The quality of their fingerlings and feed is unmatched, and it shows in the health and size of my fish. What really surprised me was the personalized support – they actually came to my farm and helped me troubleshoot issues. My profits have seen a significant jump, and I'm even planning to invest in a new pond next season. It's truly changed my outlook on fish farming.
+      </p>
+    </div>
+  </div>
+
+  <!-- Testimonial 3 -->
+  <div class="story-card" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+    <img src="https://static.wixstatic.com/media/08be63_1558efb548664da580c2f35036a49e79~mv2.png" alt="Sarah Adhiambo" style="width: 100%; height: 250px; object-fit: cover;">
+    <div style="padding: 25px;">
+      <h3 style="font-size: 22px; margin-bottom: 10px; color: #222;">Sarah Adhiambo</h3>
+      <p style="color: #01afff; margin-bottom: 15px;"><em>Mixed Farmer, Homa Bay</em></p>
+      <p style="color: #666; line-height: 1.6; margin-bottom: 20px;">
+        As a woman in fish farming, I sometimes felt isolated and lacked access to good resources. Aquasmat changed that for me. Their inclusive training programs and readily available, affordable feed made a huge difference. I used to struggle with disease outbreaks, but with their guidance, my fish are healthier than ever. Now, I'm not just a fish farmer; I'm a successful businesswoman contributing significantly to my household income. It's incredibly empowering.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+        </div>
+        
+        <!-- Navigation between stories -->
+        {% if stories.has_other_pages %}
+        <div class="pagination" style="display: flex; justify-content: center; gap: 15px; margin-top: 40px;">
+            {% if stories.has_previous %}
+                <a href="?page={{ stories.previous_page_number }}" style="padding: 10px 20px; background-color: #01afff; color: white; border-radius: 6px; text-decoration: none;">
+                    Previous
+                </a>
+            {% endif %}
+            
+            {% for num in stories.paginator.page_range %}
+                {% if stories.number == num %}
+                    <span style="padding: 10px 20px; background-color: #E8F5F0; color: #01afff; border-radius: 6px; font-weight: bold;">
+                        {{ num }}
+                    </span>
+                {% elif num > stories.number|add:'-3' and num < stories.number|add:'3' %}
+                    <a href="?page={{ num }}" style="padding: 10px 20px; background-color: white; color: #01afff; border-radius: 6px; text-decoration: none;">
+                        {{ num }}
+                    </a>
+                {% endif %}
+            {% endfor %}
+            
+            {% if stories.has_next %}
+                <a href="?page={{ stories.next_page_number }}" style="padding: 10px 20px; background-color: #01afff; color: white; border-radius: 6px; text-decoration: none;">
+                    Next
+                </a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section style="padding: 70px 14px; background-color: #E8F5F0; text-align: center;">
+    <div class="container" style="max-width: 800px; margin: auto;">
+        <h2 style="color: #032ff4; font-size: 36px; margin-bottom: 20px;">Ready to Transform Your Fish Farming Business?</h2>
+        <p style="font-size: 18px; color: #01afff; margin-bottom: 40px;">
+            Join hundreds of farmers already benefiting from the Aquarech platform
+        </p>
+        <a href="#" class="app-button" style="padding: 15px 40px; font-size: 16px; background-color: #01afff; color: white; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block;">
+            Get Started Today
+        </a>
+    </div>
+</section>
+
+<!-- Newsletter -->
+<section style="padding: 60px 12px; background-color: #ffffff; border-top: 1px solid #eee;">
+    <div class="container" style="max-width: 600px; margin: auto; text-align: center;">
+        <h3 style="color: #1900ff; font-size: 28px; margin-bottom: 20px;">Stay Updated</h3>
+        <p style="color: #01afff; margin-bottom: 30px; font-size: 16px; line-height: 1.6;">
+            Subscribe to our newsletter for the latest in sustainable aquaculture, farmer success stories, and industry insights.
+        </p>
+        
+        <form action="#" method="post" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 500px; margin: 0 auto;">
+            {% csrf_token %}
+            <input type="email" name="email" placeholder="Enter your email" required 
+                   style="padding: 15px 20px; border: 1px solid #ddd; border-radius: 8px; flex: 1; min-width: 250px; font-size: 16px;">
+            <button type="submit" class="app-button" style="padding: 15px 30px; font-size: 16px; background-color: #01afff; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">
+                Subscribe
+            </button>
+        </form>
+    </div>
+</section>
+{% endblock %}

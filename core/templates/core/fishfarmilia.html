@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}FISH FARMILIA | Aquasmat{% endblock %}
+
+{% block content %}
+<div class="market-page">
+    <!-- Hero Section -->
+    <section class="market-hero" style="
+        padding: 100px 20px;
+        background: linear-gradient(rgba(17, 1, 243, 0.85), rgba(0, 0, 0, 0.85)),
+                    url('/static/images/fish-market-hero.jpg');
+        background-size: cover;
+        background-position: center;
+    ">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h1 style="font-size: 48px; font-weight: 700; color: #01afff; margin-bottom: 20px; line-height: 1.2;">
+                        Kenya's Largest Fish Marketplace
+                    </h1>
+                    <p style="font-size: 18px; color: #666; margin-bottom: 30px; line-height: 1.6;">
+                        Aquasmat connects you to the freshest, locally-produced fish from Lake Victoria. 
+                        Our marketplace offers premium tilapia that's protein-rich, sustainably sourced, 
+                        and delivered with the highest standards of quality.
+                    </p>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="#ordering" class="app-button" style="background-color: #01afff;">
+                            <i class="fas fa-shopping-basket"></i> Order Now
+                        </a>
+                        <a href="#benefits" class="app-button" style="background-color: #0aaddf;">
+                            <i class="fas fa-info-circle"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+                <div style="flex: 1; max-width: 350px;">
+                    <img src="https://static.wixstatic.com/media/08be63_36426e85f3cd4ccf8109e0b80fa9bcc0~mv2.png" alt="Aquasmat Fish Market" 
+                         style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ordering Section -->
+    <section id="ordering" style="padding: 80px 20px; background-color: #F7FAF9;">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+            <h2 style="text-align: center; font-size: 36px; color: #01afff; margin-bottom: 60px; position: relative;">
+                How To Order
+                <span style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 80px; height: 3px; background-color: #FF6B00;"></span>
+            </h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; max-width: 800px; margin: 0 auto;">
+                <div style="background: white; border-radius: 12px; padding: 40px 30px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                    <h3 style="font-size: 22px; margin-bottom: 15px; color: #222;">USSD Code</h3>
+                    <p style="font-size: 24px; font-weight: 700; color: #f1404f; margin-bottom: 15px;">coming soon</p>
+                    <p style="color: #666;">Quick and easy ordering from any mobile phone</p>
+                </div>
+                
+                <div style="background: white; border-radius: 12px; padding: 40px 30px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                    <h3 style="font-size: 22px; margin-bottom: 15px; color: #222;">Phone Call</h3>
+                    <p style="font-size: 24px; font-weight: 700; color: #01afff; margin-bottom: 15px;">+254 717 425 854</p>
+                    <p style="color: #666;">Speak directly with our customer service team</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="padding: 100px 20px; background-color: #01afff; color: white; text-align: center;">
+        <div class="container" style="max-width: 800px; margin: auto;">
+            <h2 style="font-size: 36px; margin-bottom: 20px;">Ready to experience the Aquasmat difference?</h2>
+            <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.9;">
+                Join thousands of satisfied customers enjoying fresh fish daily
+            </p>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+                <a href="tel:0110884669" class="app-button" style="background-color: white; color: #01afff;">
+                    <i class="fas fa-phone"></i> Call to Order
+                </a>
+                <a href="tel:*789*4#" class="app-button" style="background-color: #FF6B00; color: white;">
+                    <i class="fas fa-mobile"></i> USSD Code
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
+
+{% block styles %}
+<style>
+    .app-button {
+        display: inline-block;
+        padding: 12px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .app-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .app-button i {
+        font-size: 16px;
+        margin-right: 8px;
+    }
+    
+    @media (max-width: 768px) {
+        .market-hero h1 {
+            font-size: 36px !important;
+        }
+        
+        section {
+            padding: 50px 20px !important;
+        }
+        
+        h2 {
+            font-size: 28px !important;
+            margin-bottom: 40px !important;
+        }
+    }
+</style>
+{% endblock %}
