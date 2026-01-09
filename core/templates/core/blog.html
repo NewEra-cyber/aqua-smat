@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}BLOG | Aquasmat{% endblock %}
+
+{% block content %}
+<!-- Blog Hero Section -->
+<section class="blog-hero" style="background: linear-gradient(rgba(17, 1, 243, 0.85), rgba(0, 0, 0, 0.85)), url('{% static 'core/images/blog-hero.jpg' %}'); background-size: cover; background-position: center; padding: 120px 20px; text-align: center; color: white;">
+    <div class="container">
+        <h1 style="font-size: 48px; font-weight: 700; margin-bottom: 20px;">Aquasmat Blog</h1>
+        <p style="font-size: 20px; max-width: 800px; margin: 0 auto;">
+            Insights, news and updates on aquaculture in Africa
+        </p>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section style="padding: 60px 20px; background-color: #E8F5F0;">
+    <div class="container" style="max-width: 1000px; margin: auto; text-align: center;">
+        <h2 style="font-size: 28px; color: #01afff; margin-bottom: 20px;">Download our Quarterly Newsletter here!</h2>
+        <p style="font-size: 18px; color: #666; max-width: 700px; margin: 0 auto 30px;">
+            Stay updated with our latest news and insights by checking out our quarterly newsletters here. We're excited to share what's new and keep you informed!
+        </p>
+        <a href="#" class="app-button" style="padding: 12px 30px; font-size: 16px; display: inline-flex; align-items: center;">
+            <i class="fas fa-download" style="margin-right: 10px;"></i> Download Q1 2025 Newsletter
+        </a>
+    </div>
+</section>
+
+<!-- Blog Content -->
+<section style="padding: 80px 20px; background-color: #ffffff;">
+    <div class="container" style="max-width: 1200px; margin: auto;">
+        <div style="display: grid; grid-template-columns: 250px 1fr; gap: 40px;">
+            <!-- Categories Sidebar -->
+            <div style="position: sticky; top: 100px; align-self: start;">
+                <h3 style="font-size: 20px; color: #01afff; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #E8F5F0;">Categories</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 15px;"><a href="#" style="color: #666; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">All Posts</a></li>
+                    <li style="margin-bottom: 15px;"><a href="#" style="color: #666; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">Aquaculture</a></li>
+                    <li style="margin-bottom: 15px;"><a href="#" style="color: #666; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">Technology</a></li>
+                    <li style="margin-bottom: 15px;"><a href="#" style="color: #666; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">Fish Farmers</a></li>
+                    <li style="margin-bottom: 15px;"><a href="#" style="color: #666; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">Climate action</a></li>
+                    <li style="margin-bottom: 15px;"><a href="#" style="color: #666; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">Funding</a></li>
+                    <li style="margin-bottom: 15px;"><a href="#" style="color: #666; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">Fish Feeds</a></li>
+                    <li style="margin-bottom: 15px;"><a href="#" style="color: #666; text-decoration: none; font-weight: 500; transition: color 0.3s ease;">More</a></li>
+                </ul>
+            </div>
+
+            <!-- Blog Posts -->
+            <div>
+                <!-- Post 1 -->
+                <article style="margin-bottom: 60px; border-bottom: 1px solid #eee; padding-bottom: 40px;">
+                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <span style="background-color: #E8F5F0; color: #01afff; padding: 5px 10px; border-radius: 4px; font-size: 14px; font-weight: 600;">Funding</span>
+                        <span style="margin: 0 10px; color: #ccc;">•</span>
+                        <span style="color: #666; font-size: 14px;">Apr 4</span>
+                    </div>
+                    <h2 style="font-size: 28px; color: #222; margin-bottom: 15px;">Aquasmat launches AquaPesa to bridge Africa's fish farming credit gap</h2>
+                    <p style="color: #666; margin-bottom: 20px; font-size: 18px;">AquaPesa is the gateway to profitable fish farming.</p>
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <img src="https://static.wixstatic.com/media/8e740e_c7ce948993d34849b6e26131eeb3c444~mv2.avif/v1/fill/w_454,h_341,al_c,q_90,enc_avif,quality_auto/8e740e_c7ce948993d34849b6e26131eeb3c444~mv2.avif" alt="Feed Business Middle East & Africa" style="width: 24px; height: 24px; border-radius: 50%; margin-right: 10px;">
+                        <span style="color: #666; font-size: 14px;">Feed Business Middle East & Africa</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="color: #666; font-size: 14px;">
+                            <span>2 min read</span>
+                            <span style="margin: 0 10px;">•</span>
+                            <span>78 views</span>
+                            <span style="margin: 0 10px;">•</span>
+                            <span>0 comments</span>
+                        </div>
+                        <div>
+                            <button style="background: none; border: none; color: #032ff4; cursor: pointer;">
+                                <i class="far fa-heart" style="margin-right: 5px;"></i> Like
+                            </button>
+                        </div>
+                    </div>
+                </article>
+</section>
+
+<!-- Newsletter Subscription -->
+<section style="padding: 80px 20px; background-color: #01afff; color: white; text-align: center;">
+    <div class="container" style="max-width: 800px; margin: auto;">
+        <h2 style="font-size: 32px; margin-bottom: 20px;">Stay Updated with Aquasmat</h2>
+        <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.9;">
+            Subscribe to our newsletter to receive the latest blog posts and company news directly to your inbox
+        </p>
+        <form style="display: flex; max-width: 500px; margin: 0 auto;">
+            <input type="email" placeholder="Your email address" style="flex: 1; padding: 12px 20px; border: none; border-radius: 4px 0 0 4px; font-size: 16px;">
+            <button type="submit" class="app-button" style="padding: 12px 20px; font-size: 16px; border-radius: 0 4px 4px 0; border: none;">
+                Subscribe
+            </button>
+        </form>
+    </div>
+</section>
+{% endblock %}

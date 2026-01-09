@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+{% load static %}
+
+ 
+{% block title %}FISH FEEDS | Aquasmat{% endblock %}
+
+{% block content %}
+<!-- Hero Section with Parallax Effect -->
+<section class="fish-feeds-hero" style="
+    background: linear-gradient(rgba(17, 1, 243, 0.85), rgba(0, 0, 0, 0.85)), 
+                url('https://static.wixstatic.com/media/8e740e_8036ee648cc74f7f926c03e4c2d5a12e~mv2.jpg/v1/crop/x_10,y_518,w_2604,h_1076/fill/w_533,h_220,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/0M7A1008%20Edited%20Edited_edited.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 150px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+">
+    <div class="container" style="position: relative; z-index: 2; max-width: 900px;">
+        <h1 style="font-size: 52px; font-weight: 700; margin-bottom: 25px; line-height: 1.3;">Premium Fish Feeds Delivery</h1>
+        <p style="font-size: 22px; max-width: 700px; margin: 0 auto 40px; line-height: 1.6;">
+            The fastest, most reliable way to get high-quality fish feeds delivered to your farm
+        </p>
+        <a href="#order" class="app-button" style="
+            background-color: white; 
+            color: #01afff; 
+            padding: 15px 40px; 
+            font-size: 18px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        ">
+            Order Now
+        </a>
+    </div>
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: linear-gradient(to bottom, transparent, white);"></div>
+</section>
+
+<!-- Feed Delivery Section -->
+<section id="order" style="padding: 100px 20px; background-color: #ffffff;">
+    <div class="container" style="max-width: 1200px; margin: auto;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; align-items: center;">
+            <div>
+ 
+                <h2 style="font-size: 36px; color: #0008ff; margin-bottom: 25px; line-height: 1.3;">Last Mile Feed Delivery</h2>
+                <p style="font-size: 18px; color: #000000; margin-bottom: 25px; line-height: 1.7;">
+                    Aquasmat not only provides access to premium fish feeds, but ensures rapid delivery straight to your farm gate. Our efficient Last Mile Distribution System covers multiple counties across Kenya.
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 30px;">
+                    <div style="background-color: #E8F5F0; padding: 15px; border-radius: 8px;">
+                        <div style="font-size: 18px; font-weight: 600; color: #01afff; margin-bottom: 5px;">8+</div>
+                        <div style="font-size: 14px; color: #666;">Counties Served</div>
+                    </div>
+                    <div style="background-color: #E8F5F0; padding: 15px; border-radius: 8px;">
+                        <div style="font-size: 18px; font-weight: 600; color: #01afff; margin-bottom: 5px;">24-48h</div>
+                        <div style="font-size: 14px; color: #666;">Delivery Time</div>
+                    </div>
+                </div>
+                <a href="#" class="app-button" style="
+                    padding: 15px 40px; 
+                    font-size: 16px; 
+                    background-color: #01afff; 
+                    color: white; 
+                    border-radius: 8px; 
+                    text-decoration: none; 
+                    font-weight: 600;
+                    display: inline-block;
+                    transition: all 0.3s ease;
+                ">
+                    Place Your Order
+                </a>
+            </div>
+            <div style="position: relative;">
+                <img src="{% static 'core/images/delivery-image.jpg' %}" alt="Last Mile Delivery" style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                <div style="position: absolute; bottom: -30px; left: -30px; background-color: white; padding: 20px; border-radius: 12px; width: 250px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                        <div style="width: 40px; height: 40px; background-color: #E8F5F0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                            <i class="fas fa-check" style="color: #01afff;"></i>
+                        </div>
+                        <div style="font-weight: 600; color: #222;">Available Locations</div>
+                    </div>
+ 
+                    <div style="font-size: 20px; color: #666; line-height: 1.6;">
+                        Busia, Migori, Siaya, Kisumu, Homabay
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- App Download Section -->
+<section style="padding: 100px 20px; background-color: white;">
+    <div class="container" style="max-width: 1000px; margin: auto; text-align: center;">
+        <div style="max-width: 700px; margin: 0 auto 60px;">
+            <h2 style="font-size: 36px; color: #0008ff; margin-bottom: 20px;">Fishmart</h2>
+            <p style="font-size: 18px; color: #666; line-height: 1.7;">
+ 
+                Order fish feeds, track deliveries, manage your farm, and access expert advice - all through the Aquasmat mobile application.
+ 
+                Order fish feeds, track deliveries, manage your farm, and access expert advice - all through the Aquasmat mobile application.
+  
+            </p>
+        </div>
+        
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 60px; align-items: center;">
+            <div style="text-align: left; max-width: 400px;">
+                <div style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+                    <div style="width: 60px; height: 60px; background-color: #E8F5F0; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0;">
+                        <i class="fas fa-mobile-alt" style="color: #01afff; font-size: 24px;"></i>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 22px; color: #222; margin-bottom: 10px;">Easy Ordering</h3>
+                        <p style="color: #666; line-height: 1.6;">Browse and order feeds in just a few taps</p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; align-items: flex-start; margin-bottom: 30px;">
+                    <div style="width: 60px; height: 60px; background-color: #E8F5F0; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0;">
+                        <i class="fas fa-map-marker-alt" style="color: #01afff; font-size: 24px;"></i>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 22px; color: #222; margin-bottom: 10px;">Real-time Tracking</h3>
+                        <p style="color: #666; line-height: 1.6;">Follow your delivery from warehouse to farm</p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; align-items: flex-start;">
+                    <div style="width: 60px; height: 60px; background-color: #E8F5F0; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; flex-shrink: 0;">
+                        <i class="fas fa-headset" style="color: #01afff; font-size: 24px;"></i>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 22px; color: #222; margin-bottom: 10px;">Support</h3>
+                        <p style="color: #666; line-height: 1.6;">24/7 customer service for all your queries</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="background-color: #F7FAF9; border-radius: 12px; padding: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <div style="margin-bottom: 30px;">
+                    <h3 style="font-size: 22px; color: #222; margin-bottom: 15px; text-align: center;">Download Now</h3>
+                    <a href="https://play.google.com/store" target="_blank" style="display: inline-block;">
+                        <img src="https://static.wixstatic.com/media/fc7570_83a62c92abd54d60915647751731bc62~mv2.png/v1/fill/w_179,h_55,al_c,lg_1,q_85,enc_avif,quality_auto/fc7570_83a62c92abd54d60915647751731bc62~mv2.png" alt="Get it on Google Play" style="height: 60px;">
+                    </a>
+                </div>
+                <div style="font-size: 14px; color: #666; text-align: center;">
+                    Available on the Google Play Store for Android devices
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA Section -->
+<section style="padding: 100px 20px; background: linear-gradient(135deg, #01afff 0%, #0a5a40 100%); color: white; text-align: center;">
+    <div class="container" style="max-width: 800px; margin: auto;">
+        <h2 style="font-size: 36px; margin-bottom: 25px; font-weight: 700;">Ready To Experience Hassle-Free Feed Delivery?</h2>
+        <p style="font-size: 18px; margin-bottom: 40px; opacity: 0.9; line-height: 1.6;">
+            Join thousands of fish farmers who trust Aquasmat for their feed supply and delivery needs
+        </p>
+        
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="#" class="app-button" style="
+                background-color: white; 
+                color: #01afff; 
+                padding: 15px 40px; 
+                font-size: 16px; 
+                border-radius: 8px;
+                font-weight: 600;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                transition: all 0.3s ease;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            ">
+                <i class="fas fa-download" style="margin-right: 10px;"></i> Download App
+            </a>
+            <a href="#" class="app-button" style="
+                background-color: transparent; 
+                color: white; 
+                padding: 15px 40px; 
+                font-size: 16px;
+                border-radius: 8px;
+                border: 2px solid white;
+                font-weight: 600;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                transition: all 0.3s ease;
+            ">
+                <i class="fas fa-phone-alt" style="margin-right: 10px;"></i> Call Our Team
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Hover effects */
+    .fish-feeds-hero:hover {
+        transform: none;
+    }
+    
+    [style*="box-shadow"]:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+    }
+    
+    .app-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2) !important;
+    }
+    
+    img[alt="Last Mile Delivery"]:hover {
+        transform: scale(1.02);
+    }
+</style>
+{% endblock %}

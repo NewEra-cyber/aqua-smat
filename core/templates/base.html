@@ -1,0 +1,798 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aquarech - Transforming aquaculture in Africa through innovative fish farming solutions">
+    <title>{% block title %}Aquasmat{% endblock %}</title>
+    <link rel="icon" href="https://static.wixstatic.com/media/08be63_dba8190507b14afca112c2869bd7bdb2~mv2.png" type="image/png" sizes="80x80">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #1A7FBE;
+            --dark-blue: #032ff4;
+            --light-blue: #01afff;
+            --accent-teal: #2B9B8D;
+            --dark-teal: #1E6F65;
+            --light-teal: #E0F2F1;
+            --aqua-blue: #00C1D4;
+            --wave-blue: #0088CC;
+            --dark-text: #2D3748;
+            --medium-text: #4A5568;
+            --light-text: #718096;
+            --white: #FFFFFF;
+            --light-gray: #F7FAFC;
+            --medium-gray: #E2E8F0;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --transition-slow: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.12);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+            --shadow-xl: 0 15px 35px rgba(0,0,0,0.2);
+            --border-radius: 12px;
+            --border-radius-sm: 6px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: var(--light-gray);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 5%;
+            background-color: var(--light-blue);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition-slow);
+            background-color: var(--aqua-blue);
+            backdrop-filter: blur(10px);
+            height: 90px;
+        }
+
+        nav.scrolled {
+            padding: 10px 5%;
+            box-shadow: var(--shadow-md);
+        }
+
+        .logo img {
+            height: 70px;
+            transition: var(--transition);
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+            border-radius: 8px;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+        }
+
+        .nav-center {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            font-size: 15px;
+            position: relative;
+            padding: 8px 0;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(90deg, var(--primary-blue), var(--aqua-blue));
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: -20px;
+            background-color: var(--white);
+            min-width: 220px;
+            box-shadow: var(--shadow-lg);
+            border-radius: var(--border-radius-sm);
+            z-index: 100;
+            padding: 10px 0;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            border-top: 3px solid var(--primary-blue);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            animation: fadeInUp 0.3s ease-out;
+        }
+
+        .dropdown-content a {
+            padding: 12px 25px;
+            display: block;
+            color: var(--medium-text);
+            font-size: 14px;
+            transition: var(--transition);
+            text-transform: none;
+            letter-spacing: normal;
+        }
+
+        .dropdown-content a:hover {
+            color: var(--primary-blue);
+            background-color: var(--light-blue);
+            padding-left: 30px;
+        }
+
+        .app-button {
+            background: linear-gradient(90deg, var(--primary-blue), var(--aqua-blue));
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(26, 127, 190, 0.3);
+        }
+
+        .app-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(26, 127, 190, 0.4);
+            background: linear-gradient(90deg, var(--dark-blue), var(--wave-blue));
+        }
+
+        .app-button i {
+            font-size: 18px;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--dark-text);
+            cursor: pointer;
+            z-index: 1001;
+            transition: var(--transition);
+        }
+
+        .mobile-menu-btn:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Main Content */
+        main {
+            min-height: calc(100vh - 400px);
+            overflow: hidden;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--dark-blue), var(--primary-blue));
+            color: white;
+            padding: 80px 0 30px;
+            position: relative;
+            clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: linear-gradient(to right, var(--primary-blue), var(--aqua-blue));
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: white;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--aqua-blue);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 15px;
+            transition: var(--transition);
+        }
+
+        .footer-column ul li:hover {
+            transform: translateX(5px);
+        }
+
+        .footer-column ul li a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 15px;
+            display: inline-block;
+        }
+
+        .footer-column ul li a:hover {
+            color: white;
+        }
+
+        .footer-about p {
+            color: rgba(255,255,255,0.8);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .newsletter {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .newsletter input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: var(--border-radius-sm);
+            font-size: 14px;
+            min-width: 0;
+            transition: var(--transition);
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+        .newsletter input:focus {
+            outline: none;
+            background-color: rgba(255,255,255,0.2);
+            box-shadow: 0 0 0 2px var(--aqua-blue);
+        }
+
+        .newsletter input::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .subscribe-btn {
+            background-color: var(--aqua-blue);
+            color: white;
+            padding: 0 25px;
+            border: none;
+            border-radius: var(--border-radius-sm);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: var(--transition);
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        .subscribe-btn:hover {
+            background-color: var(--wave-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 193, 212, 0.3);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            color: white;
+            background-color: rgba(255,255,255,0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--aqua-blue);
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .footer-bottom {
+            background-color: rgba(0,0,0,0.1);
+            padding: 20px 0;
+            text-align: center;
+            font-size: 14px;
+            color: rgba(255,255,255,0.7);
+            margin-top: 40px;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--aqua-blue));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: var(--shadow-md);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            nav {
+                padding: 15px 3%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            nav {
+                padding: 15px 20px;
+            }
+            
+            .nav-links {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-center {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 300px;
+                height: 100vh;
+                background-color: var(--white);
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 100px 30px 30px;
+                transition: var(--transition-slow);
+                box-shadow: -5px 0 25px rgba(0,0,0,0.15);
+            }
+
+            .nav-center.active {
+                right: 0;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 20px;
+                width: 100%;
+            }
+
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                background-color: transparent;
+                padding-left: 15px;
+                opacity: 1;
+                transform: none;
+                display: none;
+                margin-top: 10px;
+                border-top: none;
+                border-left: 2px solid var(--primary-blue);
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: none;
+            }
+
+            .dropdown.active .dropdown-content {
+                display: block;
+                animation: none;
+            }
+
+            .app-button {
+                width: 100%;
+                justify-content: center;
+                margin-top: 30px;
+            }
+
+            footer {
+                clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%);
+                padding: 60px 0 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter {
+                flex-direction: column;
+            }
+
+            .subscribe-btn {
+                padding: 12px;
+            }
+
+            .back-to-top {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            footer {
+                clip-path: polygon(0 2%, 100% 0, 100% 100%, 0% 100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+          <a href="{% url 'home' %}">
+              <img src="https://static.wixstatic.com/media/08be63_dba8190507b14afca112c2869bd7bdb2~mv2.png" alt="Aquarech Logo">
+          </a>
+        </div>
+
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="nav-center">
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li class="dropdown">
+                    <a href="{% url 'programs' %}">Programs <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'yisa' %}">BDS</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="{% url 'products' %}">Products <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'aquafedha' %}">AQUAPESA</a>
+                        <a href="{% url 'fishfeeds' %}">FISH FEEDS</a>
+                        <a href="{% url 'hatchery' %}">HATCHERY</a>
+                        <a href="{% url 'fishdeli' %}">FISHMART</a>
+                        <a href="{% url 'fishfarmilia' %}">FISHBASKET</a>
+                    </div>
+                </li>
+                <li><a href="{% url 'farmers' %}">Farmers</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+
+            <a href="https://play.google.com/store/apps/details?id=com.example.aquasmat" class="app-button pulse" target="_blank">
+                <i class="fas fa-download"></i> FISHMART
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}
+        <!-- Default content if not overridden -->
+        <section class="hero" style="background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('{% static "images/hero-bg.jpg" %}'); background-size: cover; background-position: center; padding: 120px 0; text-align: center;">
+            <div class="container">
+                <h1 style="font-size: 3.5rem; font-weight: 700; color: var(--primary-blue); margin-bottom: 25px; line-height: 1.2; animation: fadeInUp 1s ease-out;">Transforming Aquaculture in Africa</h1>
+                <p style="font-size: 1.25rem; color: var(--medium-text); max-width: 700px; margin: 0 auto 40px; animation: fadeInUp 1s ease-out 0.2s forwards; opacity: 0;">Aquasmat is building the digital and physical infrastructure to power Africa's aquaculture value chain, starting with small-scale fish farmers.</p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; animation: fadeInUp 1s ease-out 0.4s forwards; opacity: 0;">
+                    <a href="{% url 'contact' %}" class="app-button">Contact Us</a>
+                    <a href="{% url 'about' %}" class="app-button" style="background: transparent; border: 2px solid var(--primary-blue); color: var(--primary-blue);">Learn More</a>
+                </div>
+            </div>
+        </section>
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column footer-about">
+                    <div class="logo" style="margin-bottom: 25px;">
+                        <a href="{% url 'home' %}">
+                            <img src="https://static.wixstatic.com/media/08be63_dba8190507b14afca112c2869bd7bdb2~mv2.png" alt="aquarech Logo" style="height: 100px; filter: brightness(0) invert(1); padding: 0;">
+                        </a>
+                    </div>
+                    <p>Our goal drives us to do all in our power to empower small and medium-sized fish farmers by developing creative and modern fish farming methods using cutting-edge technology.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>What We Do</h3>
+                    <ul>
+                        <li><a href="{% url 'farmers' %}">Farmers</a></li>
+                        <li><a href="{% url 'products' %}">Manufacturers</a></li>
+                        <li><a href="{% url 'products' %}">Buyers</a></li>
+                        <li><a href="{% url 'programs' %}">Training Programs</a></li>
+                        <li><a href="{% url 'blog' %}">Research & Insights</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+                        <li><a href="{% url 'about' %}#team">Our Team</a></li>
+                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Our Platforms</h3>
+                    <ul>
+                        <li><a href="https://play.google.com/store/apps/details?id=com.example.aquarech" target="_blank">Farmer App</a></li>
+                        <li><a href="#">Trader App</a></li>
+                        <li><a href="#">Dashboard</a></li>
+                    </ul>
+                    <h3 style="margin-top: 30px;">Newsletter</h3>
+                    <p style="color: rgba(255,255,255,0.8); font-size: 14px; margin-bottom: 15px;">Subscribe to our updates</p>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Your email">
+                        <button class="subscribe-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 Aquasmat Ltd. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navCenter = document.querySelector('.nav-center');
+        const dropdowns = document.querySelectorAll('.dropdown');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            navCenter.classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Mobile dropdown functionality
+        dropdowns.forEach(dropdown => {
+            const link = dropdown.querySelector('a');
+            
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a:not(.dropdown > a)').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    navCenter.classList.remove('active');
+                    mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                    mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Back to top button
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add animation to elements when they come into view
+        const animateOnScroll = function() {
+            const elements = document.querySelectorAll('.hero h1, .hero p, .hero .app-button');
+            
+            elements.forEach((element, index) => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.animation = `fadeInUp 0.5s ease-out ${index * 0.2}s forwards`;
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

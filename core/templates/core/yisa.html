@@ -1,0 +1,227 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}YISA | Aquasmat{% endblock %}
+{% block content %}
+<!-- Enhanced Hero Section with Background Image -->
+<section class="yisa-hero" style="
+    background: linear-gradient(rgba(17, 1, 243, 0.85), rgba(0, 0, 0, 0.85)), 
+                url('https://static.wixstatic.com/media/08be63_a980652142184005bd289feb8b0307fb~mv2.avif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 150px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+">
+    <div class="container" style="position: relative; z-index: 2; max-width: 900px;">
+        <h1 style="font-size: 52px; font-weight: 700; margin-bottom: 25px; line-height: 1.3;">Business Development Sevice program</h1>
+        <p style="font-size: 22px; max-width: 700px; margin: 0 auto 40px; line-height: 1.6;">
+            Empowering young people, especially women, through innovative aquaculture opportunities
+        </p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="#apply" class="app-button" style="
+                background-color: white; 
+                color: #0F7B501afff6; 
+                padding: 15px 40px; 
+                font-size: 18px;
+                border-radius: 8px;
+                font-weight: 600;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            ">
+                Apply Now
+            </a>
+            <a href="#stories" class="app-button" style="
+                background-color: transparent; 
+                color: white; 
+                padding: 15px 40px; 
+                font-size: 18px;
+                border-radius: 8px;
+                border: 2px solid white;
+                font-weight: 600;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            ">
+                View Success Stories
+            </a>
+        </div>
+    </div>
+    <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: linear-gradient(to bottom, transparent, white);"></div>
+</section>
+
+<!-- Program Overview with Animated Stats -->
+<section style="padding: 100px 20px; background-color: white;">
+    <div class="container" style="max-width: 1200px; margin: auto;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; align-items: center;">
+            <div>
+                <h2 style="font-size: 36px; color: #01afff; margin-bottom: 25px; line-height: 1.3;">About BDS Program</h2>
+                <p style="font-size: 18px; color: #666; margin-bottom: 25px; line-height: 1.7;">
+                    The Business Development Services program (BDS), is a fully sponsored program by Aquasmat that aims at enhancing the aquaculture SMEs to gradually develop from startups, grow and finally expand. This program also helps the SMEs to be able to acquire or access financial support in form of loans from the financial institutions since they are trained on importance of business compliance and financial management. Through this program most SMEs have been able to experience positive growth in terms of sales and profits. Aquasmat looks forward to engage more partners to enable the program reach at least 1000 SMEs in the aquaculture sector.
+                </p>
+                <p style="font-size: 18px; color: #666; margin-bottom: 30px; line-height: 1.7;">
+                    Our project transforms perceptions of aquaculture's potential for entrepreneurship and employment, building knowledge and capacity so young people, especially women, can access the sector's growth opportunities.
+                </p>
+                
+            </div>
+            <div style="position: relative;">
+                <img src="https://static.wixstatic.com/media/08be63_8b8daa00100b482f8a03553e79d0f88e~mv2.jpg" alt="YISA Participants" style="width: 100%; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Program Details with Icons -->
+<section style="padding: 100px 20px; background-color: #F7FAF9;">
+    <div class="container" style="max-width: 1200px; margin: auto;">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="font-size: 36px; color: #01afff; margin-bottom: 20px; position: relative; display: inline-block;">
+                Program Details
+                <span style="position: absolute; bottom: -10px; left: 0; right: 0; height: 3px; background-color: #01afff; width: 80px; margin: 0 auto;"></span>
+            </h2>
+            <p style="font-size: 18px; color: #666; max-width: 700px; margin: 20px auto 0;">
+                BDS is designed to create sustainable opportunities for young people in aquaculture
+            </p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <div style="background: white; border-radius: 12px; padding: 40px 30px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; border-top: 4px solid #000000;">
+                <div style="width: 80px; height: 80px; background-color: #E8F5F0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                    <i class="fas fa-map-marker-alt" style="color: #032ff4; font-size: 30px;"></i>
+                </div>
+                <h3 style="font-size: 22px; color: #222; margin-bottom: 15px;">Location Coverage</h3>
+                <p style="color: #666; line-height: 1.6;">
+                    Operating in Kisumu, Homa Bay, Siaya, Kakamega, Busia, Migori counties
+                </p>
+            </div>
+            
+            <div style="background: white; border-radius: 12px; padding: 40px 30px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; border-top: 4px solid #000000;">
+                <div style="width: 80px; height: 80px; background-color: #E8F5F0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                    <i class="fas fa-users" style="color: #032ff4; font-size: 30px;"></i>
+                </div>
+                <h3 style="font-size: 22px; color: #222; margin-bottom: 15px;">Eligibility</h3>
+                <p style="color: #666; line-height: 1.6;">
+                    Open to youth aged 18-35 years from the six target counties
+                </p>
+            </div>
+            
+            <div style="background: white; border-radius: 12px; padding: 40px 30px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; border-top: 4px solid #000000;">
+                <div style="width: 80px; height: 80px; background-color: #E8F5F0; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
+                    <i class="fas fa-bullseye" style="color: #032ff4; font-size: 30px;"></i>
+                </div>
+                <h3 style="font-size: 22px; color: #222; margin-bottom: 15px;">Our Goal</h3>
+                <p style="color: #666; line-height: 1.6;">
+                    Create 150,000 sustainable jobs in aquaculture for young people
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Enhanced CTA Section -->
+<section id="apply" style="padding: 100px 20px; background: linear-gradient(135deg, #032ff4 0%, #0a5a40 100%); color: white; text-align: center;">
+    <div class="container" style="max-width: 800px; margin: auto;">
+        <h2 style="font-size: 36px; margin-bottom: 20px; font-weight: 700;">Ready To Transform Your Future With Aquaculture?</h2>
+        <p style="font-size: 18px; margin-bottom: 40px; opacity: 0.9; line-height: 1.6;">
+            Join the BDS program today and gain access to training, resources, and support to launch your aquaculture business.
+        </p>
+        
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 50px;">
+            <a href="#" class="app-button" style="
+                background-color: white; 
+                color: #032ff4; 
+                padding: 15px 40px; 
+                font-size: 16px; 
+                border-radius: 8px;
+                font-weight: 600;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                transition: all 0.3s ease;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            ">
+                <i class="fas fa-user-edit" style="margin-right: 10px;"></i> Apply Now
+            </a>
+            <a href="#" class="app-button" style="
+                background-color: transparent; 
+                color: white; 
+                padding: 15px 40px; 
+                font-size: 16px;
+                border-radius: 8px;
+                border: 2px solid white;
+                font-weight: 600;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                transition: all 0.3s ease;
+            ">
+                <i class="fas fa-question-circle" style="margin-right: 10px;"></i> Learn More
+            </a>
+        </div>
+        
+        <div style="margin-top: 50px; padding-top: 50px; border-top: 1px solid rgba(255,255,255,0.2);">
+            <h3 style="font-size: 24px; margin-bottom: 25px;">Need Help? Contact Us</h3>
+            <div style="display: flex; gap: 30px; justify-content: center; flex-wrap: wrap;">
+                <div>
+                    <i class="fas fa-phone-alt" style="font-size: 20px; margin-bottom: 10px; display: block;"></i>
+                    <a href="tel:+254XXXXXXXXX" style="font-size: 18px; color: white; text-decoration: none; font-weight: 600;">+254 717 425 854</a>
+                </div>
+                <div>
+                    <i class="fas fa-envelope" style="font-size: 20px; margin-bottom: 10px; display: block;"></i>
+                    <a href="mailto:BDS@Aquasmat.com" style="font-size: 18px; color: white; text-decoration: none; font-weight: 600;">bds@Aquasmat.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript for Interactive Elements -->
+<script>
+    // Counter animation
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+    
+    counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
+        
+        if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCounter, 1);
+        } else {
+            counter.innerText = target;
+        }
+        
+        function updateCounter() {
+            const count = +counter.innerText;
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCounter, 1);
+            } else {
+                counter.innerText = target;
+            }
+        }
+    });
+    
+    // Story carousel navigation
+    const slider = document.querySelector('.stories-slider');
+    const prevBtn = document.querySelector('.story-nav.prev');
+    const nextBtn = document.querySelector('.story-nav.next');
+    
+    nextBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: 330, behavior: 'smooth' });
+    });
+    
+    prevBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: -330, behavior: 'smooth' });
+    });
+</script>
+{% endblock %}

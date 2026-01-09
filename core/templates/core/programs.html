@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load static %}
+
+ 
+{% block title %}PROGRAMS | Aquasmat{% endblock %} 
+
+{% block content %}
+<!-- Programs Hero Section -->
+<section class="programs-hero" style="
+    padding: 120px 20px;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(rgba(17, 1, 243, 0.85), rgba(0, 0, 0, 0.85)),
+                url('https://static.wixstatic.com/media/8e740e_de631198687e4a04891acdf4c4782f9a~mv2.jpg/v1/fill/w_1351,h_378,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/8e740e_de631198687e4a04891acdf4c4782f9a~mv2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+">
+    <div class="container" style="position: relative; z-index: 2;">
+        <h1 style="font-size: 48px; font-weight: 700; color: #ffffff; margin-bottom: 20px; line-height: 1.3;">
+            Our Programs
+        </h1>
+        <p style="font-family:'Times New Roman', Times, serif; font-size: 20px; color: #01afff; max-width: 800px; margin: 0 auto 40px; line-height: 1.6;">
+            Welcome to our programs designed to transform the future of aquaculture. We offer initiatives such as the Business Development Services program, which help small and medium-sized fish farmers thrive.
+        </p>
+        <a href="#programs" class="app-button" style="
+            padding: 15px 35px;
+            font-size: 16px;
+            background-color: #01afff;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        ">
+            Explore Our Programs
+        </a>
+    </div>
+</section>
+
+<!-- Mission Statement -->
+<section style="padding: 80px 20px; background-color: #01afff;">
+    <div class="container" style="max-width: 1000px; margin: auto; text-align: center;">
+        <p style="font-family: Times New Roman; font-size: 22px; color: #222; max-width: 800px; margin: 0 auto;">
+            Our mission focuses on empowering women and youth to engage in fish production, ensuring a profitable and sustainable future for all. Join us in making a difference in the aquaculture sector!
+        </p>
+    </div>
+</section>
+
+<!-- Programs Grid -->
+<section id="programs" style="padding: 80px 20px; background-color: #F7FAF9;">
+    <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; margin-top: 40px;">
+ 
+            <!-- BDS Program -->
+            <div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+                <div style="height: 400px; overflow: hidden; padding-top: 40; margin: 0;">
+                    <img src="https://static.wixstatic.com/media/08be63_8b8daa00100b482f8a03553e79d0f88e~mv2.jpg" alt="Youth In Sustainable Aquaculture" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <div style="padding: 30px;">
+                    <h3 style="font-size: 24px; color: #01afff; margin-bottom: 15px;">Business Development Services program</h3>
+                    <p style="color: #666; margin-bottom: 20px;">
+                        BDS supports small and medium sized farmers by offering training services on how to run a business especially after harvesting the fish. The training involves business soft skills, financial literacy, financial management, sales and marketing, business compliance e.t.c. …   
+        </div>
+    </div>
+</section>
+
+<!-- Impact Section -->
+<section style="padding: 80px 20px; background-color: #ffffff;">
+    <div class="container" style="max-width: 1000px; margin: auto; text-align: center;">
+        <h2 style="font-size: 36px; color: #032ff4; margin-bottom: 40px;">Our Impact</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center;">
+            <div>
+                <div style="font-size: 48px; font-weight: 700; color: #01afff; margin-bottom: 10px;">120+</div>
+                <div style="font-size: 18px; color: #666;">Farmers Trained</div>
+            </div>
+            <div>
+                <div style="font-size: 48px; font-weight: 700; color: #01afff; margin-bottom: 10px;">70%</div>
+                <div style="font-size: 18px; color: #666;">Women Participation</div>
+            </div>
+            <div>
+                <div style="font-size: 48px; font-weight: 700; color: #01afff; margin-bottom: 10px;">30+</div>
+                <div style="font-size: 18px; color: #666;">Communities Reached</div>
+            </div>
+            <div>
+                <div style="font-size: 48px; font-weight: 700; color: #01afff; margin-bottom: 10px;">25%</div>
+                <div style="font-size: 18px; color: #666;">Income Increase</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section style="padding: 80px 20px; background-color: #032ff4; text-align: center;">
+    <div class="container" style="max-width: 800px; margin: auto;">
+        <h2 style="font-size: 32px; color: white; margin-bottom: 20px;">Ready to join our programs?</h2>
+        <p style="font-size: 18px; color: rgba(255,255,255,0.9); margin-bottom: 30px;">
+            Whether you're a young person looking to start in aquaculture or an established farmer seeking to improve your operations, we have a program for you.
+        </p>
+        <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+            <a href="{% url 'contact' %}" class="app-button" style="background-color: white; color: #01afff; padding: 12px 30px; font-size: 16px;">
+                Contact Us
+            </a>
+            <a href="#" class="app-button" style="background-color: transparent; border: 2px solid white; color: white; padding: 12px 30px; font-size: 16px;">
+                Download Brochure
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

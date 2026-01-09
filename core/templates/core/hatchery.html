@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% load static %}
+
+ 
+{% block title %}HATCHERY | Aquasmat{% endblock %}
+ 
+{% block content %}
+<div class="hatchery-page">
+    <!-- Hero Section -->
+    <section class="hatchery-hero" style="
+        padding: 100px 20px;
+        background: linear-gradient(rgba(17, 1, 243, 0.85), rgba(0, 0, 0, 0.85)),
+                    url('https://static.wixstatic.com/media/8e740e_9279b9a8bbc8492c98ff56ede0b3bc04~mv2.jpeg/v1/fill/w_1486,h_376,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/8e740e_9279b9a8bbc8492c98ff56ede0b3bc04~mv2.jpeg');
+        background-size: cover;
+        background-position: center;
+    ">
+        <div class="container" style="max-width: 1200px; margin: auto; text-align: center;">
+            <h1 style="font-size: 48px; font-weight: 700; color: #01afff; margin-bottom: 15px; line-height: 1.2;">
+                AQUASMAT HATCHERY & TECHNICAL TRANSFER CENTER
+  
+            </h1>
+            <h2 style="font-size: 36px; color: #666; margin-bottom: 30px; line-height: 1.4;">
+                TRAINING HUB FOR AQUACULTURE EXCELLENCE
+            </h2>
+            <a href="#training" class="app-button" style="display: inline-flex; align-items: center; gap: 8px;">
+                <i class="fas fa-arrow-down"></i> Explore Our Programs
+            </a>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section style="padding: 80px 20px; background-color: white;">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h2 style="font-size: 36px; color: #01afff; margin-bottom: 20px; line-height: 1.3;">
+                        Hands-On Learning for Aquaculture Success
+                    </h2>
+                    <p style="font-size: 18px; color: #666; line-height: 1.6; margin-bottom: 30px;">
+                        Located at Kanyamedha, our Learning Hub is a dynamic learning space where farmers, students, 
+                        and aquaculture enthusiasts come together to develop practical skills and build confidence in 
+                        modern fish farming techniques.
+                    </p>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="#contact" class="app-button" style="background-color: #01afff;">
+                            <i class="fas fa-calendar-alt"></i> Schedule a Visit
+                        </a>
+                        <a href="#programs" class="app-button" style="background-color: #0aaddf;">
+                            <i class="fas fa-book-open"></i> View Programs
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Operations Section -->
+    <section id="operations" style="padding: 80px 20px; background-color: #F7FAF9;">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+            <h2 style="text-align: center; font-size: 36px; color: #01afff; margin-bottom: 60px; position: relative;">
+                A Day at Our Hatchery
+                <span style="position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); width: 80px; height: 3px; background-color: #0aaddf;"></span>
+            </h2>
+
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
+                <div style="background: white; border-radius: 12px; padding: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <h3 style="font-size: 22px; color: #01afff; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-water" style="color: #0aaddf;"></i> Broodstock Management
+                    </h3>
+                    <p style="color: #666;">
+                        Care and maintenance of high-quality brood fish for optimal breeding results
+                    </p>
+                </div>
+                
+                <div style="background: white; border-radius: 12px; padding: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <h3 style="font-size: 22px; color: #01afff; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-egg" style="color: #0aaddf;"></i> Egg Incubation
+                    </h3>
+                    <p style="color: #666;">
+                        Specialized techniques for high hatch rates and healthy fry production
+                    </p>
+                </div>
+                
+                <div style="background: white; border-radius: 12px; padding: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <h3 style="font-size: 22px; color: #01afff; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                        <i class="fas fa-fish" style="color: #0aaddf;"></i> Larval Rearing
+                    </h3>
+                    <p style="color: #666;">
+                        Critical early-stage care to ensure strong, viable fingerlings
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" style="padding: 80px 20px; background-color: #01afff; color: white;">
+        <div class="container" style="max-width: 800px; margin: auto; text-align: center;">
+            <h2 style="font-size: 36px; margin-bottom: 20px;">Ready to Enhance Your Aquaculture Skills?</h2>
+            <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.9;">
+                Contact us to book a training session or schedule a visit to our hatchery facility.
+            </p>
+            
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 40px;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-phone-alt" style="font-size: 20px;"></i>
+ 
+                    <span>+254 717 425 854</span>
+  
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                    <span>hatchery@aquasmat.com</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-map-marker-alt" style="font-size: 20px;"></i>
+                    <span>LBDA Kibos, Kisumu</span>
+                </div>
+            </div>
+            
+            <a href="#" class="app-button" style="background-color: white; color: #01afff; display: inline-flex; align-items: center; gap: 8px;">
+                <i class="fas fa-envelope"></i> Send Us a Message
+            </a>
+        </div>
+    </section>
+</div>
+{% endblock %}
+
+{% block styles %}
+<style>
+    .app-button {
+        display: inline-block;
+        padding: 12px 25px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .app-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .app-button i {
+        font-size: 16px;
+    }
+    
+    @media (max-width: 768px) {
+        .hatchery-hero h1 {
+            font-size: 36px !important;
+        }
+        
+        .hatchery-hero h2 {
+            font-size: 24px !important;
+        }
+        
+        section {
+            padding: 50px 20px !important;
+        }
+        
+        h2 {
+            font-size: 28px !important;
+            margin-bottom: 40px !important;
+        }
+    }
+</style>
+{% endblock %}
