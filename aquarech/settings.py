@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-4b+y_6xnn$jk+0ul$_uvy5v7&vijb1y#visy2cd4jrrp7w4w)w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'aqua-smat-1.onrender.com',
