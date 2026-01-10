@@ -28,6 +28,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'aqua-smat-1.onrender.com',
+    'aquasmat.com',
+    'www.aquasmat.com',
     'localhost',
     '127.0.0.1',
 ]
