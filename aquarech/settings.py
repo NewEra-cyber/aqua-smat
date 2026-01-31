@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-4b+y_6xnn$jk+0ul$_uvy5v7&vijb1y#visy2cd4jrrp7w4w)w
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'aquasmat_app.onrender.com',
+    'aquasmat-app.onrender.com',
     'aquasmat.com',
     'www.aquasmat.com',
     'localhost',
